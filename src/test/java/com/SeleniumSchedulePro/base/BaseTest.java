@@ -9,7 +9,7 @@ public class BaseTest {
     protected WebDriver driver;
 
 
-    //Prueba github actiuons
+    //Prueba github act
 
     @BeforeEach
     public void setUp() {
