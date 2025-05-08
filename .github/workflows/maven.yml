@@ -1,4 +1,4 @@
-name: Maven Build
+name: Maven Build and Test
 
 on:
   push:
@@ -22,6 +22,10 @@ jobs:
           java-version: '23'
           distribution: 'temurin'
 
-      - name: Build with Maven
+      - name: Install Google Chrome
         run: |
-          mvn clean install
+          sudo apt update
+          sudo apt install -y google-chrome-stable
+
+      - name: Build and run tests
+        run: mvn clean install
