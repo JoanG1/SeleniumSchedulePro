@@ -12,7 +12,7 @@ public class BaseTest {
     protected WebDriver driver;
 
 
-    //Prueba github act
+    //Prueba github actions
 
     @BeforeEach
     public void setUp() throws Exception {
