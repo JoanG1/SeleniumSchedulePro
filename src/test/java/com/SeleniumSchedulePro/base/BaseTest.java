@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BaseTest {
     protected WebDriver driver;
 
+
+    //Prueba para ver la github actions
     @BeforeEach
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\MI PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
