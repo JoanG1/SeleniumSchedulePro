@@ -9,7 +9,7 @@ public class BaseTest {
     protected WebDriver driver;
 
 
-    //Prueba para ver la github actions
+    //Prueba
     @BeforeEach
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\MI PC\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
