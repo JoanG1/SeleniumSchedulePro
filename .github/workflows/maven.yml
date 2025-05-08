@@ -1,0 +1,30 @@
+name: Maven Build
+
+on:
+  push:
+    branches:
+      - main  # Acción disparada en cada push a la rama main
+  pull_request:
+    branches:
+      - main  # Acción disparada en pull request hacia la rama main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Utiliza la última imagen de Ubuntu disponible
+    
+    steps:
+      # Paso 1: Check-out el código del repositorio
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      # Paso 2: Configura JDK 23
+      - name: Set up JDK 23
+        uses: actions/setup-java@v2
+        with:
+          java-version: '23'  # Utiliza JDK 23
+          distribution: 'adoptopenjdk'
+
+      # Paso 3: Ejecuta mvn clean e install
+      - name: Build with Maven
+        run: |
+          mvn clean install
